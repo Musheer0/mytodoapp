@@ -1,22 +1,28 @@
-import { View } from 'react-native'
-import React from 'react'
-import Todo from '../components/todo'
-
-const index = () => {
-  const f = ['hello', 'world', 'how', 'are', 'you']
+import {StyleSheet, Text, View} from 'react-native';
+import Todo from "@/components/todo";
+export default function HomeScreen() {
   return (
-    <View 
-    style={{
-      padding: 5,
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 4,
-      
-    }}
-    >
-      <Todo/>
-    </View>
-  )
+   <View>
+    <Todo/>
+   </View>
+  );
 }
 
-export default index
+const styles = StyleSheet.create({
+  titleContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  stepContainer: {
+    gap: 8,
+    marginBottom: 8,
+  },
+  reactLogo: {
+    height: 178,
+    width: 290,
+    bottom: 0,
+    left: 0,
+    position: 'absolute',
+  },
+});
